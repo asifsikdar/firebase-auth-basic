@@ -145,8 +145,10 @@ function App() {
             {
                 <div>
                     <h1>Own Authentication</h1>
+                    <input onChange={()=>setNewUser(!newUser)} type="checkbox" name="newUser" id="" />
+                    <lebel htmlFor="newUser">Register</lebel>
                     <form onSubmit={getSubmit}>
-                        {<input type="text" name="newUser" onBlur={getValue} id="" placeholder="Enter your name"
+                        { newUser && <input type="text" name="newUser" onBlur={getValue} id="" placeholder="Enter your name"
                                required/>}
                         <br/>
                         <input type="email" name="email" onBlur={getValue} id="" placeholder="Enter your email"
